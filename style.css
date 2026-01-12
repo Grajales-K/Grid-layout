@@ -7,8 +7,9 @@
 }
 
 html, body {
-     background-color: aqua;
-     margin: 10px;
+    background-color: aqua;
+    margin: 10px;
+    
 }
 
 .container > div:nth-child(1n){
@@ -35,9 +36,55 @@ html, body {
     background-color: rgb(4, 30, 201);
 }
 
-.container{
+/* -------- option A -------- */
+
+/* .container{
     display: grid;
     grid-template-columns: 100px auto;
     grid-template-rows: 50px 50px;
+    grid-gap: .25em;
+} */
+
+/* -------- option B -------- */
+
+/* .container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: 50px 50px 200px;
+    grid-gap: .25em;
+} */
+
+/* -------- option C -------- */
+
+/* .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 200px;
+    grid-gap: .25em;
+} */
+
+/* -------- option D -------- */
+
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 50px;
+    grid-gap: .25em;
+} */
+
+/* -------- option E -------- */
+
+/* .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: .25em;
+} */
+
+/* -------- option F short method -------- */
+
+.container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr); /* first is the rows second is the columns */
     grid-gap: .25em;
 }
